@@ -6,7 +6,6 @@
     <title>Pig Dice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -14,23 +13,31 @@
     <script src="js/scripts.js"></script>
 </head>
 <body>
-    <div class="container">
-    <div class="row">
+    <div class="container-fluid">
+    <div class="row" id="dice">
+      <div class="col-md-12">   
 <h1><strong>Pig Dice</strong></h1>
     </div>
+    </div>
+    <div class="row" id="play">
+       <div class="col-md-6" id="play1">
+    <h4>Player1</h4>
+    <img src="images/player1.jpg" alt="images">
+    <button>score1</button>
+        </div>
+        <div class="col-md-6" id="play2">
+    <h4>Player2</h4>
+    <img src="images/player2.jpg" alt="images">
+    <button>score2</button>
+  </div>
+</div>
     <div class="row">
-        <div class="col-md-6">
-
-        </div>
-        <div class="col-md-6">
-
-        </div>
+        <button>Total score</button>
     </div>
     <div class="footer">
-            <button>Roll Dice </button>
-            <button>Hold</button> 
-    </div>
-
+        <button>Roll Dice </button>
+        <button>Hold</button> 
 </div>
+    </div>
 </body>
 </html>

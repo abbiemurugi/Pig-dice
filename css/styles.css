@@ -1,0 +1,28 @@
+#dice{
+   background-color: black;
+   height: 100px;
+   color: white;
+   border-image-width: auto;
+}
+#dice h1{
+    text-align: center;
+
+}
+#play1 img{
+   height: 200px;
+   width: 200px;
+}
+#play1 button{
+   
+}
+#play2 img{
+    height: 200px;
+    width: 200px;
+    text-align: right;
+}
+#play{
+    background-color: blue;
+    padding-bottom: 700px;
+
+
+}
