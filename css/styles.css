@@ -1,5 +1,6 @@
 #dice{
    background-color: black;
+   padding-top: 20px;
    height: 100px;
    color: white;
    border-image-width: auto;
@@ -9,20 +10,20 @@
 
 }
 #play1 img{
-   height: 200px;
-   width: 200px;
-}
-#play1 button{
-   
+   height: 250px;
+   width: 250px;
+   margin-right: 50px;
 }
 #play2 img{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     text-align: right;
 }
 #play{
     background-color: blue;
     padding-bottom: 700px;
-
-
+}
+.Ts{
+   padding-left: 400px;
+   padding-top: 100px;
 }
