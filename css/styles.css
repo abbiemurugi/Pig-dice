@@ -11,13 +11,24 @@
 }
 #play1 img{
    height: 250px;
-   width: 250px;
-   margin-right: 50px;
+   width: 400px;
+   margin-right: 100px;
+   padding-left: 150px;
+}
+#play1 h4{
+    text-align: center;
+    margin-top: 50px;
+}
+#play2 h4{
+    text-align: center;
+    margin-top: 50px;
 }
 #play2 img{
     height: 250px;
-    width: 250px;
+    width: 400px;
     text-align: right;
+    margin-right: 100px;
+    padding-left: 150px;
 }
 #play{
     background-color: blue;
@@ -26,4 +37,7 @@
 .Ts{
    padding-left: 400px;
    padding-top: 100px;
+}
+.roll{
+    padding-top: 100px;
 }
