@@ -11,30 +11,35 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/scripts.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet'>
 </head>
 <body>
     <div class="container-fluid">
     <div class="row" id="dice">
-      <div class="col-md-12">   
+      <div class="col-md-12"> 
+        <!--<div class="dice" data-text="dice">PIG DICE</div>-->   
 <h1><strong>Pig Dice</strong></h1>
     </div>
     </div>
     <div class="row" id="play">
        <div class="col-md-6" id="play1">
     <h4>Player1</h4>
-    <img src="images/player1.jpg" alt="images">
-    <button>score1</button>
+    <img src="images/pig1.jpg" alt="images">
         </div>
         <div class="col-md-6" id="play2">
     <h4>Player2</h4>
-    <img src="images/player2.jpg" alt="images">
-    <button>score2</button>
+    <img src="images/pig.jpg" alt="images">
+    <div class="row" id="players score">
+        <div class="col-md-6" id="play1score"></div>
+        <div class="col-md-6" id="play2score"></div>
+    </div>
   </div>
   <div class="Ts">
-    <button>Total score</button>
+        <button type="button" class="btn btn-default">Total Score</button>
     <div class="roll">
-    <button>Roll Dice </button>
-    <button>Hold</button> 
+        <button type="button" class="btn btn-default">Roll Dice</button>
+        <button type="button" class="btn btn-default">Hold</button>
+    </div>
 </div>
     </div>
   </div>
