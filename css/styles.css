@@ -32,12 +32,21 @@
 }
 #play{
     background-color: blue;
-    /*padding-bottom: 100px;*/
+    padding-bottom: 200px;
 }
 .Ts{
    padding-left: 520px;
    padding-top: 100px;
 }
-.roll{
-    padding-top: 50px;
+#rollD{
+   padding-top: 100px;
+   height: 100px;
+   padding-left: 100px;
+   margin-left: 500px;
+}
+#hold{
+    float: right;
+    padding-right: 600px;
+    margin-left: 500px;
+    width: 100px;
 }

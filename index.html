@@ -34,15 +34,20 @@
         <p class="col-md-6 player2score" id="play2score"></p>
     </div>
     </div>
-    <div class="Ts">
-        <p class="col-md-6">Roll Total: <span id="player1RollScore"></span></p>
-        <p class="col-md-6">Roll Total: <span id="player2RollScore"></span></p>
+    <div class="row" id="Ts">
+        <div class="col-md-6">Roll Total: <span id="player1RollScore"></span></div>
+        <div class="col-md-6">Roll Total: <span id="player2RollScore"></span></div>
         </div>
        <!-- <button type="button" class="btn btn-default">Total Score</button>-->
-    <div class="roll">
+    <div class="row" id="roll">
+        <div class="col-md-6" id="rollD">
         <button type="button" class="btn btn-default">Roll Dice</button>
-        <button type="button" class="btn btn-default">Hold</button>
-    </div>
+       <!-- <button type="button" class="btn btn-default">Hold</button>-->
+       </div>
+    <div class="col-md-6" id="hold">
+    <form id="end-turn"></form>
+        <button class="btn btn-default" id="Hold">Hold</button>
+        </div>
     </div>
     </div>
 
