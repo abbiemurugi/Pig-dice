@@ -9,11 +9,11 @@ $(document).ready(function() {
     var total = currentTurn.total
 
     //Prints initial Turn Total of 0
-    $("#Ts-total").text(total);
+    $("#Ts").text(total);
 
     //Prints initial player scores of 0
-    $('#player1RollScore').text(player1RollScore);
-    $('#player2RollScore').text(player2RollScore);
+    $('#player1score').text(player1score);
+    $('#player2score').text(player2score);
 
     //Prints current Player
     $('#current_player').text(currentTurn.player.userName);
@@ -29,7 +29,7 @@ $(document).ready(function() {
         $('#roll').text(result);
 
         //Prints the roll total to the page
-        $('#Ts-total').text(currentTurn.total);
+        $('#Ts').text(currentTurn.total);
 
         //Determines the winner and prints player score to page
         if ((currentTurn.total + currentTurn.player.score) >= 100) {
@@ -58,7 +58,7 @@ $(document).ready(function() {
 
         //Prints the cleared Current Roll and Turn Total on page
         $('#roll').text(currentTurn.randNumber);
-        $('#Ts-total').text(currentTurn.total);s
+        $('#Ts').text(currentTurn.total);s
     
     });
 });
@@ -95,4 +95,4 @@ Turn.prototype.diceRoller = function(player1, player2) {
             $("#player2").toggleClass("active");
             $("#player1").toggleClass("active");
         };
-    })
+    };
