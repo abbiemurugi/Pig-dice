@@ -1,37 +1,27 @@
 $(document).ready(function() {
-    $("button#roll").click(function(event) {
+    $("#rolled").click(function(event) {
     event.preventDefault();
 
     var player1 = new player1("player 1");
     var player2 = new player2("player 2")
     
-    var currentTurn = new currentTurn(player1)
+    var currentTurn = new currentTurn(player1, player2)
     var total = currentTurn.total
 
-    //Prints initial Turn Total of 0
-    $("#Ts").text(total);
+    $("#player score").text(total);
 
-    //Prints initial player scores of 0
     $('#player1score').text(player1score);
     $('#player2score').text(player2score);
 
-    //Prints current Player
-    $('#current_player').text(currentTurn.player.userName);
-
-    //This code runs when you click the Roll button
-    $("form#roll").submit(function(event) {
+    $("form#rollD").submit(function(event) {
         event.preventDefault();
 
-        //Creates a dice roll number
-        var result = currentTurn.diceRoller(player1, player2);
+        var result = currentTurn.diceRoller(player1, player2)
 
-        //Prints the roll number to the page
-        $('#roll').text(result);
+        $('#rollD').text(result);
 
-        //Prints the roll total to the page
         $('#Ts').text(currentTurn.total);
 
-        //Determines the winner and prints player score to page
         if ((currentTurn.total + currentTurn.player.score) >= 100) {
             if (currentTurn.player == player1) {
                 $('#player1RollScore').text(currentTurn.total + currentTurn.player.score);
@@ -42,23 +32,20 @@ $(document).ready(function() {
             };
         };
     });
+   });
 
-    //This code runs when you click the End Turn button
-    $("form#end-turn").submit(function(event) {
+    $("form#hold").submit(function(event) {
         event.preventDefault();
 
         currentTurn.endTurn(player1, player2);
 
-        //Prints current Player
         $('#current_player').text(currentTurn.player.userName);
 
-        //Prints players scores
-        $('#player1RollScore').text(player1RollScore);
-        $('#player2RollScore').text(player2RollScore);
+        $('#player1score').text(player1score);
+        $('#player2score').text(player2score);
 
-        //Prints the cleared Current Roll and Turn Total on page
         $('#roll').text(currentTurn.randNumber);
-        $('#Ts').text(currentTurn.total);s
+        $('#Ts').text(currentTurn.total);
     
     });
 });
@@ -82,12 +69,13 @@ Turn.prototype.diceRoller = function(player1, player2) {
         this.randNumber += randNumber;
         return randNumber;
     };
+    };
     Turn.prototype.endTurn = function(player1, player2) {
         this.player.score += this.total;
         this.total = 0;
         this.randNumber = 0;
         if (this.player == player1) {
-            this.player = player2;
+            this.player = player2; 
             $("#player2").toggleClass("active");
             $("#player1").toggleClass("active");
         } else if (this.player == player2) {
