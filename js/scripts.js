@@ -1,86 +1,134 @@
-$(document).ready(function() {
-    $("#rolled").click(function(event) {
-    event.preventDefault();
+// business logic
 
-    var player1 = new player1("player 1");
-    var player2 = new player2("player 2")
-    
-    var currentTurn = new currentTurn(player1, player2)
-    var total = currentTurn.total
+// rolling the dice
+function rollDice(){
+    return Math.floor(Math.random() * 6) + 1;
+};
+// player one
+var player1RollCount = 0;
+var player1Scores = 0;
+var player1TotalScore = 0;
+var p1Pigs = [];
 
-    $("#player score").text(total);
 
-    $('#player1score').text(player1score);
-    $('#player2score').text(player2score);
+function player1Roll(){
+    player1RollCount = player1RollCount + 1;
+    player1Scores = rollDice();
+    p1Pigs.push(player1Scores);
 
-    $("form#rollD").submit(function(event) {
-        event.preventDefault();
+    $("#player1Score").text(player1Scores);
+    $("#player1RollScore").text(player1RollCount);
+    $("#p1Hold").show(350);
+    $("#p2Hold").hide(350);
+    $("#p2Roll").hide(350);
 
-        var result = currentTurn.diceRoller(player1, player2)
-
-        $('#rollD').text(result);
-
-        $('#Ts').text(currentTurn.total);
-
-        if ((currentTurn.total + currentTurn.player.score) >= 100) {
-            if (currentTurn.player == player1) {
-                $('#player1RollScore').text(currentTurn.total + currentTurn.player.score);
-                alert("You are the winner!");
-            } else if (currentTurn.player == player2) {
-                $('#player2RollScore').text(currentTurn.total + currentTurn.player.score)
-                alert("You are the winner!");
-            };
-        };
-    });
-   });
-
-    $("form#hold").submit(function(event) {
-        event.preventDefault();
-
-        currentTurn.endTurn(player1, player2);
-
-        $('#current_player').text(currentTurn.player.userName);
-
-        $('#player1score').text(player1score);
-        $('#player2score').text(player2score);
-
-        $('#roll').text(currentTurn.randNumber);
-        $('#Ts').text(currentTurn.total);
-    
-    });
-});
-
- function Turn(player) {
-    this.total = 0;
-    this.randNumber = 0;
-    this.player = player;
 };
 
-Turn.prototype.diceRoller = function(player1, player2) {
-    var randNumber = Math.floor(Math.random() * 6) + 1;
-    this.total += randNumber;
 
-    if (randNumber == 1) {
-        this.total = 0;
-        this.endTurn(player1, player2);
+function p1HoldDice(){
 
-        return randNumber;
-    } else {
-        this.randNumber += randNumber;
-        return randNumber;
-    };
-    };
-    Turn.prototype.endTurn = function(player1, player2) {
-        this.player.score += this.total;
-        this.total = 0;
-        this.randNumber = 0;
-        if (this.player == player1) {
-            this.player = player2; 
-            $("#player2").toggleClass("active");
-            $("#player1").toggleClass("active");
-        } else if (this.player == player2) {
-            this.player = player1;
-            $("#player2").toggleClass("active");
-            $("#player1").toggleClass("active");
-        };
-    };
+    // generate total score
+//var total = 0;    
+
+p1Pigs.forEach(function(pig){
+    return player1TotalScore += pig;
+});
+    $("#player1Roll").hide();
+    $("#player1TotalScore").text(player1TotalScore);
+
+
+    //pass dice to player2
+
+    $("#p1Hold").hide(350);
+    $("#p2Hold").hide(350);
+    $("#p2Roll").show(350);
+    $("#p1Roll").hide(350);
+
+
+
+
+
+ };
+
+
+
+// player two
+var player2RollCount = 0;
+var player2Scores = 0;
+var player2TotalScore = 0;
+var p2Pigs = [];
+function player2Roll(){
+    player2RollCount = player2RollCount + 1;
+    player2Scores = rollDice();
+    p2Pigs.push(player2Scores);
+
+    $("#player2Score").text(player2Scores);
+    $("#player2RollScore").text(player2RollCount);
+    $("#p2Hold").show(350);
+    $("#p1Hold").hide(350);
+    $("#p1Roll").hide(350);
+
+
+};
+
+function p2HoldDice(){
+
+    // generate total score
+//var total = 0;    
+
+p2Pigs.forEach(function(pig){
+    return player2TotalScore += pig;
+});
+    $("#player2Roll").hide();
+    $("#player2TotalScore").text(player2TotalScore);
+
+
+    //pass dice to player1
+    $("#p2Hold").hide(350);
+    $("#p1Hold").hide(350);
+    $("#p1Roll").show(350);
+    $("#p2Roll").hide(350);
+
+
+ };
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+
+
+    // player 1
+    $("#p1Roll").click(function(){
+        player1Roll();
+    });
+
+    $("#p1Hold").click(function(){
+        p1HoldDice();
+    });
+
+
+
+
+
+    // player 2
+
+    $("#p2Roll").click(function(){
+
+
+        player2Roll();
+    });
+
+    $("#p2Hold").click(function(){
+        p2HoldDice();
+    });
+
+
+
+
+
+});

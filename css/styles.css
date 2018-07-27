@@ -30,22 +30,19 @@
     margin-right: 100px;
     padding-left: 150px;
 }
-#play{
-    background-color: blue;
-    padding-bottom: 100px;
+
+
+#roll{
+    padding-top: 50px;
 }
-#Ts{
-   padding-left: 520px;
-}
-#rollD{
-   padding-top: 100px;
-   height: 100px;
-   padding-left: 100px;
-   margin-left: 500px;
-}
-#hold{
+#rollDe{
     float: right;
-    padding-right: 600px;
-    margin-left: 500px;
-    width: 100px;
 }
+
+#p1Hold,
+#p2Hold{
+    display: none;
+}
+.play{
+    background-color: blue;height:200px;}
+body{background-color: blue;}

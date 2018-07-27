@@ -21,40 +21,33 @@
     <h1><strong>Pig Dice</strong></h1>
     </div>
     </div>
+    <div class="play">
     <div class="row" id="play">
        <div class="col-md-6" id="play1">
     <h4>Player1</h4>
     <img src="images/pig1.jpg" alt="images">
+    <div>
+        <button class="btn btn-default" id="p1Roll">Roll Dice</button>
+        <button  class="btn btn-default" id="p1Hold">Hold</button>
+    </div>
         </div>
         <div class="col-md-6" id="play2">
     <h4>Player2</h4>
     <img src="images/pig.jpg" alt="images">
+    <div>
+        <button class="btn btn-default" id="p2Roll">Roll Dice</button>
+        <button class="btn btn-default" id="p2Hold">Hold</button>
+    </div>
+    </div>
+    </div>
     <div class="row" id="players score">
-        <p class="col-md-6 player1score" id="play1score"></p>
-        <p class="col-md-6 player2score" id="play2score"></p>
+        <div class="col-md-2"> Player1score: <span id="player1Score"></span></div>
+        <div class="col-md-2">Roll Total: <span id="player1RollScore"></span></div>
+        <div class="col-md-2">player1TotalScore: <span id="player1TotalScore"></span></div>
+        <div class="col-md-2"> Player2score: <span id="player2Score"></span></div>
+        <div class="col-md-2">Roll Total: <span id="player2RollScore"></span></div>
+        <div class="col-md-2">player2TotalScore: <span id="player2TotalScore"></span></div>
     </div>
-    </div>
-    <div class="row" id="Ts">
-        <div class="col-md-6">Roll Total: <span id="player1RollScore"></span></div>
-        <div class="col-md-6">Roll Total: <span id="player2RollScore"></span></div>
-        </div>
-       <!-- <button type="button" class="btn btn-default">Total Score</button>-->
-    <div class="row" id="roll">
-        <div class="col-md-6" id="rollD">
-    <form id=rollDe"">
-        <button type="submit" class="btn btn-default" id="rolled">Roll Dice</button>
-    </form>
-       <!-- <button type="button" class="btn btn-default">Hold</button>-->
-       </div>
-    <!--<div class="col-md-6" id="hold">
-    <form id="end-turn">
-        <button class="btn btn-default" id="Hold">Hold</button>
-    </form>-->
-        <div class="col-md-6" id="hold">
-    <form id="end-turn">
-        <button type="submit" class="btn btn-default" id="Hold">Hold</button>
-    </form>
-        </div>
     </div>
     </div>
 
