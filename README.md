@@ -9,7 +9,7 @@
 * Github
 * Browser
 ## Live Demo
-* https://github.com/abbiemurugi/Pig-dice
+* https://abbiemurugi.github.io/Pig-dice/
 ## Bugs
 * WI-FI Connection
 ## Technologies used
